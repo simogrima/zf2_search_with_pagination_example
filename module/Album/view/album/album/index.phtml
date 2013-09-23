@@ -41,9 +41,9 @@ echo $this->form()->closeTag();
 <table class="table">
     <thead>
     <tr>
-    <th><a href="<?php echo $this->url('album', array('order_by' => 'artist', 'order' => $url_order, 'search_by' => $search_by)); ?>">Artist <?php if ($order_by == 'artist'): ?><i class="icon-chevron-<?php echo $url_order == 'ASC' ? 'down' : 'up' ?>"></i><?php endif; ?></a>
+    <th><a href="<?php echo $this->url('album', array_filter(array('order_by' => 'artist', 'order' => $url_order, 'search_by' => $search_by))); ?>">Artist <?php if ($order_by == 'artist'): ?><i class="icon-chevron-<?php echo $url_order == 'ASC' ? 'down' : 'up' ?>"></i><?php endif; ?></a>
         </th>
-<th><a href="<?php echo $this->url('album', array('order_by' => 'title', 'order' => $url_order, 'search_by' => $search_by)); ?>">Title <?php if ($order_by == 'title'): ?><i class="icon-chevron-<?php echo $url_order == 'ASC' ? 'down' : 'up' ?>"></i><?php endif; ?></a>
+<th><a href="<?php echo $this->url('album', array_filter(array('order_by' => 'title', 'order' => $url_order, 'search_by' => $search_by))); ?>">Title <?php if ($order_by == 'title'): ?><i class="icon-chevron-<?php echo $url_order == 'ASC' ? 'down' : 'up' ?>"></i><?php endif; ?></a>
         </th>
 <th>Action</th>
     </tr>
